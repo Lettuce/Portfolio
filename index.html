@@ -3,46 +3,188 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Reece Dickinson's Portfolio</title>
+  <title>Reece Dickinson | Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <div class="page-glow" aria-hidden="true"></div>
 
-<header>
-  <nav class="navbar">
-    <h1 class="logo">Home</h1>
-    <ul class="nav-links">
-      <li><a href="#">Home</a></li>
-      <li><a href="#">Education and Experience</a></li>
-      <li><a href="#">Contact</a></li>
-    </ul>
-  </nav>
-</header>
+  <header class="site-header">
+    <nav class="navbar">
+      <a href="#home" class="logo">Reece Dickinson</a>
+      <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-<section class="hero">
-  <h2>Reece Dickinson's Portfolio</h2>
-  <p>Reece Dickinson is a student attending Cal Poly Humboldt, who is majoring in Computer Science.</p>
-  <a href="#" class="btn">Get Started</a>
-</section>
+  <main>
+    <section id="home" class="hero section">
+      <p class="eyebrow">Computer Science Student | Full-Stack + AI</p>
+      <h1>Building useful software with clear thinking, clean systems, and constant curiosity.</h1>
+      <p class="hero-copy">
+        Third-year Computer Science student at Cal Poly Humboldt (expected May 2028), focused on full-stack
+        development and applied AI systems.
+      </p>
+      <div class="hero-cta">
+        <a class="btn" href="#projects">View Projects</a>
+        <a class="btn btn-alt" href="#contact">Get In Touch</a>
+      </div>
+      <ul class="quick-facts">
+        <li><span>GPA</span><strong>3.94</strong></li>
+        <li><span>Dean's List</span><strong>Every Term</strong></li>
+        <li><span>Honor</span><strong>Presidential Scholar</strong></li>
+      </ul>
+    </section>
 
-<section class="services">
-  <div class="card">
-    <h3>Web Design</h3>
-    <p>Clean and modern UI/UX designs.</p>
-  </div>
-  <div class="card">
-    <h3>Development</h3>
-    <p>High-performance web applications.</p>
-  </div>
-  <div class="card">
-    <h3>Design</h3>
-    <p>High-quality and visually pleasing web and graphic designs.</p>
-  </div>
-</section>
+    <section id="about" class="section">
+      <h2>About + Education</h2>
+      <div class="grid two-col">
+        <article class="panel">
+          <h3>Profile</h3>
+          <p>
+            I am motivated to learn quickly, troubleshoot deeply, and deliver results. I work well independently
+            and in team environments, and I focus on finishing work that I start.
+          </p>
+          <p>
+            Fluent in English with Spanish-speaking capabilities, with leadership experience serving bilingual
+            communities.
+          </p>
+        </article>
+        <article class="panel">
+          <h3>Cal Poly Humboldt</h3>
+          <p><strong>B.S. Computer Science</strong> (Expected May 2028), Arcata, CA</p>
+          <ul>
+            <li>Third-year student, cumulative GPA 3.94</li>
+            <li>Presidential Scholar (3.95+ threshold) and Dean's List every term</li>
+            <li>Relevant coursework: Systems Programming, Data Structures, Web Apps Using Databases, Database Design, Computer Architecture, Discrete Mathematics, Critical Thinking with Computers</li>
+          </ul>
+        </article>
+      </div>
 
-<footer>
-  <p>© 2026 Reece Dickinson. All rights reserved.</p>
-</footer>
+      <article class="panel full-width">
+        <h3>Technical Skills</h3>
+        <div class="chip-row">
+          <span class="chip">Python</span>
+          <span class="chip">FastAPI</span>
+          <span class="chip">JavaScript</span>
+          <span class="chip">TypeScript</span>
+          <span class="chip">C++</span>
+          <span class="chip">SQL</span>
+          <span class="chip">React</span>
+          <span class="chip">Node.js</span>
+          <span class="chip">Git/GitHub</span>
+          <span class="chip">Terraform</span>
+          <span class="chip">Supabase</span>
+          <span class="chip">PGVector</span>
+          <span class="chip">Alembic</span>
+          <span class="chip">TouchDesigner</span>
+          <span class="chip">ComfyUI</span>
+        </div>
+      </article>
+    </section>
 
+    <section id="projects" class="section">
+      <h2>Technical Projects</h2>
+      <div class="grid three-col">
+        <article class="panel project-card">
+          <h3>Learning Engine (Hackathon for Social Good)</h3>
+          <p>Spring 2026</p>
+          <ul>
+            <li>Built a full-stack study platform in a 4-person team.</li>
+            <li>Enabled instructors to add quiz content using plain JSON with no coding background.</li>
+            <li>Created plain-language setup documentation and helped resolve a critical database bug under deadline pressure.</li>
+          </ul>
+        </article>
+        <article class="panel project-card">
+          <h3>RAG Document Q&A Tool</h3>
+          <p>Summer 2026</p>
+          <ul>
+            <li>Extended a FastAPI + React starter with real-time AI response streaming.</li>
+            <li>Implemented data models for users, chats, citations, and documents using Supabase, PGVector, and Alembic.</li>
+            <li>Applied the pipeline to a finance-research workflow with source-page citations for answer verification.</li>
+          </ul>
+        </article>
+        <article class="panel project-card">
+          <h3>LeetCode Grind 75</h3>
+          <p>Summer 2026</p>
+          <ul>
+            <li>Completed all 75 Grind75 problems independently.</li>
+            <li>Strengthened practical fluency with production-grade data structures and problem-solving patterns.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section id="experience" class="section">
+      <h2>Experience + Leadership</h2>
+      <div class="timeline">
+        <article class="panel timeline-item">
+          <h3>Library Scholar Intern, Terraform Project</h3>
+          <p class="meta">Cal Poly Humboldt Library | Feb 2026 - May 2026</p>
+          <ul>
+            <li>Rebuilt an AR topology sandbox simulation from scratch using new hardware and software.</li>
+            <li>Integrated a Kinect depth camera with an AI diffusion pipeline (TouchDesigner + StreamDiffusion) for interactive terrain visualization.</li>
+            <li>Authored complete setup documentation so future student scholars can onboard quickly.</li>
+            <li>Collaborated with IT and project managers to diagnose architecture issues and deliver an MIT-licensed release credited to the team.</li>
+          </ul>
+        </article>
+
+        <article class="panel timeline-item">
+          <h3>Contractor Apprentice</h3>
+          <p class="meta">Ramy Dickinson Construction | Summer 2023 - Present</p>
+          <ul>
+            <li>Manage materials, logistics, and fast-moving site operations in a small business setting.</li>
+            <li>Make practical real-time decisions while maintaining quality and reliability.</li>
+          </ul>
+        </article>
+
+        <article class="panel timeline-item">
+          <h3>Leadership + Community</h3>
+          <ul>
+            <li>President, Spanish National Honor Society - organized meetings and community initiatives across English- and Spanish-speaking members.</li>
+            <li>100+ volunteer hours through Veterans' Hall, Volunteer Trail Steward programs, and Trinidad Coastal Land Trust.</li>
+          </ul>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <h2>Resume Files</h2>
+      <div class="grid two-col">
+        <article class="panel">
+          <h3>Resume (Current)</h3>
+          <p>Most complete version with technical projects, honors, and recent experience.</p>
+          <a class="text-link" href="Reece Dickinson Resume.pdf" target="_blank" rel="noopener">Open PDF</a>
+        </article>
+        <article class="panel">
+          <h3>Resume (June 2026)</h3>
+          <p>Earlier version that includes foundational coursework and additional academic context.</p>
+          <a class="text-link" href="Resume - Reece Dickinson (June 2026) (1).pdf" target="_blank" rel="noopener">Open PDF</a>
+        </article>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact">
+      <h2>Contact</h2>
+      <p>Open to internships, collaborative projects, and full-stack or AI-focused opportunities.</p>
+      <div class="contact-links">
+        <a href="mailto:reecedickinson06@gmail.com">reecedickinson06@gmail.com</a>
+        <a href="tel:+17074987150">(707) 498-7150</a>
+        <a href="https://github.com/Lettuce" target="_blank" rel="noopener">github.com/Lettuce</a>
+        <a href="https://linkedin.com/in/reece-dickinson-9178a0419" target="_blank" rel="noopener">linkedin.com/in/reece-dickinson-9178a0419</a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2026 Reece Dickinson. Built with focus and curiosity.</p>
+  </footer>
 </body>
 </html>
