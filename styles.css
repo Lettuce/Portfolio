@@ -314,8 +314,15 @@ li {
   margin-bottom: 14px;
 }
 
+.database-previews {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+}
+
 .database-preview {
   min-height: 360px;
+  margin: 0;
   overflow: hidden;
   border: 1px solid var(--line);
   border-radius: 12px;
@@ -335,6 +342,16 @@ li {
   height: 100%;
   min-height: 360px;
   object-fit: contain;
+}
+
+.database-preview figcaption {
+  background: var(--bg-soft);
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  line-height: 1.4;
+  padding: 9px 11px;
 }
 
 .database-preview p {
@@ -490,10 +507,18 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .database-previews {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   .database-preview,
   .database-preview object,
   .database-preview img {
-    min-height: 300px;
+    min-height: 180px;
+  }
+
+  .database-preview figcaption {
+    font-size: 0.66rem;
   }
 
   .hero {
