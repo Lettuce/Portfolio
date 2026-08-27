@@ -307,6 +307,62 @@ li {
   object-fit: cover;
 }
 
+.featured-project {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+  gap: 24px;
+  margin-bottom: 14px;
+}
+
+.database-preview {
+  min-height: 360px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.database-preview object {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+}
+
+.database-preview p {
+  padding: 24px;
+  color: #172331;
+}
+
+.featured-project-copy h3 {
+  font-size: 1.55rem;
+  margin-bottom: 12px;
+}
+
+.featured-project-copy h4 {
+  color: var(--accent-strong);
+  margin: 0;
+}
+
+.compact-grid {
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.compact-grid p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin-top: 6px;
+}
+
+.database-process {
+  border-top: 1px solid var(--line);
+  color: #b9f8ff;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.78rem;
+  padding-top: 14px;
+}
+
 .panel ul {
   margin-bottom: 0;
 }
@@ -420,6 +476,15 @@ footer {
   .three-col,
   .quick-facts {
     grid-template-columns: 1fr;
+  }
+
+  .featured-project {
+    grid-template-columns: 1fr;
+  }
+
+  .database-preview,
+  .database-preview object {
+    min-height: 300px;
   }
 
   .hero {

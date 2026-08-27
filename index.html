@@ -29,7 +29,7 @@
           <p class="eyebrow">Computer Science Student | Full-Stack + AI</p>
           <h1>Building software with clarity and curiosity.</h1>
           <p class="hero-copy">
-            Third-year CS student at Cal Poly Humboldt, focused on full-stack development and applied AI.
+            Third-year CS student at Cal Poly Humboldt, focused on full-stack development, database engineering, and applied AI.
           </p>
           <div class="hero-cta">
             <a class="btn" href="#projects">View Projects</a>
@@ -63,6 +63,10 @@
             Fluent in English with Spanish-speaking capabilities, with leadership experience serving bilingual
             communities.
           </p>
+          <p>
+            My work spans the full software lifecycle: turning a problem into a data model, building the application
+            around it, testing the system, documenting the decisions, and shipping something other people can use.
+          </p>
         </article>
         <article class="panel">
           <h3>Cal Poly Humboldt</h3>
@@ -70,7 +74,8 @@
           <ul>
             <li>Third-year student, cumulative GPA 3.94</li>
             <li>Presidential Scholar (3.95+ threshold) and Dean's List every term</li>
-            <li>Relevant coursework: Systems Programming, Data Structures, Web Apps Using Databases, Database Design, Computer Architecture, Discrete Mathematics, Critical Thinking with Computers</li>
+            <li>Relevant coursework: Database Design, Web Apps Using Databases, Data Structures, Systems Programming, Computer Architecture, Discrete Mathematics</li>
+            <li>Active affiliation: Aviation Club Webmaster, managing digital outreach and community events</li>
           </ul>
         </article>
       </div>
@@ -93,17 +98,47 @@
           <span class="chip">Alembic</span>
           <span class="chip">TouchDesigner</span>
           <span class="chip">ComfyUI</span>
+          <span class="chip">PostgreSQL</span>
+          <span class="chip">Oracle SQL Developer</span>
+          <span class="chip">Docker</span>
+          <span class="chip">C</span>
+          <span class="chip">PHP</span>
+          <span class="chip">R</span>
+          <span class="chip">POSIX APIs</span>
+          <span class="chip">Valgrind</span>
         </div>
       </article>
     </section>
 
     <section id="projects" class="section">
       <h2>Technical Projects</h2>
+      <article class="panel featured-project">
+        <div class="database-preview">
+          <object data="325model.pdf" type="application/pdf" title="CS 325 database entity-relationship model">
+            <p>Database model preview unavailable. <a class="text-link" href="325model.pdf" target="_blank" rel="noopener">Open the model PDF</a>.</p>
+          </object>
+        </div>
+        <div class="featured-project-copy">
+          <p class="eyebrow">Featured database work | CS 325 | Fall 2025</p>
+          <h3>Relational Database + Transportation Tracking System</h3>
+          <p>I served as database architect for a three-person team and owned the process from requirements and conceptual modeling through implementation and verification. The result was a 3NF relational design with more than 25 logical entities and 20 tables.</p>
+          <div class="grid two-col compact-grid">
+            <div>
+              <h4>Design + modeling</h4>
+              <p>Translated the system domain into an extensive entity-relationship model, resolved relationships, and normalized data to reduce duplication and preserve dependable records.</p>
+            </div>
+            <div>
+              <h4>Build + validation</h4>
+              <p>Wrote and optimized thousands of lines of Oracle SQL, including queries, indexes, views, integrity constraints, and transaction boundaries.</p>
+            </div>
+          </div>
+          <p class="database-process"><strong>Lifecycle:</strong> requirements &rarr; ER diagram &rarr; 3NF schema &rarr; SQL implementation &rarr; constraints and views &rarr; testing and optimization</p>
+        </div>
+      </article>
       <div class="grid three-col">
         <article class="panel project-card">
           <div class="project-thumb">
-            <!-- Add a screenshot at images/project-learning-engine.jpg -->
-            <img src="images/project-learning-engine.jpg" alt="Learning Engine app screenshot" onerror="this.remove()">
+            <img src="images/project-learning-engine.png" alt="Learning Engine project slide" onerror="this.remove()">
           </div>
           <h3>Learning Engine (Hackathon for Social Good)</h3>
           <p>Spring 2026</p>
@@ -115,8 +150,7 @@
         </article>
         <article class="panel project-card">
           <div class="project-thumb">
-            <!-- Add a screenshot at images/project-rag-qa.jpg -->
-            <img src="images/project-rag-qa.jpg" alt="RAG Document Q&A tool screenshot" onerror="this.remove()">
+            <img src="images/project-rag-qa.png" alt="RAG Document Q&A tool screenshot" onerror="this.remove()">
           </div>
           <h3>RAG Document Q&A Tool</h3>
           <p>Summer 2026</p>
@@ -128,8 +162,7 @@
         </article>
         <article class="panel project-card">
           <div class="project-thumb">
-            <!-- Add a screenshot at images/project-leetcode.jpg -->
-            <img src="images/project-leetcode.jpg" alt="LeetCode Grind 75 progress screenshot" onerror="this.remove()">
+            <img src="images/project-leetcode.png" alt="LeetCode Grind 75 progress screenshot" onerror="this.remove()">
           </div>
           <h3>LeetCode Grind 75</h3>
           <p>Summer 2026</p>
@@ -146,8 +179,7 @@
       <div class="timeline">
         <article class="panel timeline-item">
           <div class="timeline-thumb">
-            <!-- Add a photo at images/ar-sandbox.jpg -->
-            <img src="images/ar-sandbox.jpg" alt="AR topology sandbox setup" onerror="this.remove()">
+            <img src="images/ar-sandbox.png" alt="AR topology sandbox setup" onerror="this.remove()">
           </div>
           <h3>Library Scholar Intern, Terraform Project</h3>
           <p class="meta">Cal Poly Humboldt Library | Feb 2026 - May 2026</p>
@@ -169,6 +201,15 @@
         </article>
 
         <article class="panel timeline-item">
+          <h3>Custom UNIX Command Line Shell</h3>
+          <p class="meta">Systems Programming | Fall 2026 - In Progress</p>
+          <ul>
+            <li>Building a UNIX-compliant shell in pure C with POSIX process lifecycle management using <code>fork()</code>, <code>exec()</code>, and <code>wait()</code>.</li>
+            <li>Implementing pipelines, input/output redirection, signal handling, foreground/background execution, and memory validation with Valgrind.</li>
+          </ul>
+        </article>
+
+        <article class="panel timeline-item">
           <h3>Leadership + Community</h3>
           <ul>
             <li>President, Spanish National Honor Society - organized meetings and community initiatives across English- and Spanish-speaking members.</li>
@@ -185,6 +226,12 @@
           <h3>Reece Dickinson Resume</h3>
           <p>Full technical projects, honors, and recent experience in one PDF.</p>
           <a class="text-link" href="Reece Dickinson Resume.pdf" target="_blank" rel="noopener">Open PDF &rarr;</a>
+        </article>
+        <article class="panel">
+          <h3>Working style</h3>
+          <p>Analytical, persistent, and comfortable translating technical decisions for non-technical teammates. I bring the same ownership to a database schema, a live deployment, and a physical project site.</p>
+          <p><strong>Languages:</strong> Native/fluent English and conversational Spanish.</p>
+          <p><strong>Certifications:</strong> Anthropic AI Fluency: Framework &amp; Foundations and Claude 101.</p>
         </article>
       </div>
     </section>
