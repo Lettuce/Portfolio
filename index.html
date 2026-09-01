@@ -10,8 +10,6 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <div class="page-glow" aria-hidden="true"></div>
-
   <header class="site-header">
     <nav class="navbar">
       <a href="#home" class="logo">Reece Dickinson</a>
@@ -26,21 +24,30 @@
 
   <main>
     <section id="home" class="hero section">
-      <p class="eyebrow">Computer Science Student | Full-Stack + AI</p>
-      <h1>Building useful software with clear thinking, clean systems, and constant curiosity.</h1>
-      <p class="hero-copy">
-        Third-year Computer Science student at Cal Poly Humboldt (expected May 2028), focused on full-stack
-        development and applied AI systems.
-      </p>
-      <div class="hero-cta">
-        <a class="btn" href="#projects">View Projects</a>
-        <a class="btn btn-alt" href="#contact">Get In Touch</a>
+      <div class="hero-flex">
+        <div class="hero-text">
+          <p class="eyebrow">Computer Science Student | Full-Stack + AI</p>
+          <h1>Building software with clarity and curiosity.</h1>
+          <p class="hero-copy">
+            Third-year CS student at Cal Poly Humboldt, focused on full-stack development, database engineering, and applied AI.
+          </p>
+          <div class="hero-cta">
+            <a class="btn" href="#projects">View Projects</a>
+            <a class="btn btn-alt" href="#contact">Get In Touch</a>
+          </div>
+          <ul class="quick-facts">
+            <li><span>GPA</span><strong>3.94</strong></li>
+            <li><span>Dean's List</span><strong>Every Term</strong></li>
+            <li><span>Honor</span><strong>Presidential Scholar</strong></li>
+          </ul>
+        </div>
+        <div class="hero-media">
+          <div class="avatar-frame">
+            <!-- Add a headshot at images/profile.jpg -->
+            <img src="images/profile.jpg" alt="Reece Dickinson" onerror="this.remove()">
+          </div>
+        </div>
       </div>
-      <ul class="quick-facts">
-        <li><span>GPA</span><strong>3.94</strong></li>
-        <li><span>Dean's List</span><strong>Every Term</strong></li>
-        <li><span>Honor</span><strong>Presidential Scholar</strong></li>
-      </ul>
     </section>
 
     <section id="about" class="section">
@@ -56,6 +63,10 @@
             Fluent in English with Spanish-speaking capabilities, with leadership experience serving bilingual
             communities.
           </p>
+          <p>
+            My work spans the full software lifecycle: turning a problem into a data model, building the application
+            around it, testing the system, documenting the decisions, and shipping something other people can use.
+          </p>
         </article>
         <article class="panel">
           <h3>Cal Poly Humboldt</h3>
@@ -63,7 +74,8 @@
           <ul>
             <li>Third-year student, cumulative GPA 3.94</li>
             <li>Presidential Scholar (3.95+ threshold) and Dean's List every term</li>
-            <li>Relevant coursework: Systems Programming, Data Structures, Web Apps Using Databases, Database Design, Computer Architecture, Discrete Mathematics, Critical Thinking with Computers</li>
+            <li>Relevant coursework: Database Design, Web Apps Using Databases, Data Structures, Systems Programming, Computer Architecture, Discrete Mathematics</li>
+            <li>Active affiliation: Aviation Club Webmaster, managing digital outreach and community events</li>
           </ul>
         </article>
       </div>
@@ -77,6 +89,9 @@
           <span class="chip">TypeScript</span>
           <span class="chip">C++</span>
           <span class="chip">SQL</span>
+          <span class="chip">PL/SQL</span>
+          <span class="chip">HTML</span>
+          <span class="chip">CSS</span>
           <span class="chip">React</span>
           <span class="chip">Node.js</span>
           <span class="chip">Git/GitHub</span>
@@ -85,14 +100,56 @@
           <span class="chip">Alembic</span>
           <span class="chip">TouchDesigner</span>
           <span class="chip">ComfyUI</span>
+          <span class="chip">PostgreSQL</span>
+          <span class="chip">Oracle SQL Developer</span>
+          <span class="chip">Docker</span>
+          <span class="chip">C</span>
+          <span class="chip">PHP</span>
+          <span class="chip">R</span>
+          <span class="chip">POSIX APIs</span>
+          <span class="chip">Valgrind</span>
+          <span class="chip">Linux</span>
         </div>
       </article>
     </section>
 
     <section id="projects" class="section">
       <h2>Technical Projects</h2>
+      <article class="panel featured-project">
+        <div class="database-previews">
+          <figure class="database-preview">
+            <img src="325model-1.png" alt="CS 325 relational database entity-relationship model">
+            <figcaption>CS 325 database design: ER model and normalized structure</figcaption>
+          </figure>
+          <figure class="database-preview">
+            <img src="Web Apps database screenshot webpage.png" alt="Web application built from the transportation tracking database">
+            <figcaption>CS 328 web application: the database brought into a usable interface</figcaption>
+          </figure>
+        </div>
+        <div class="featured-project-copy">
+          <p class="eyebrow">Featured database-to-web project | CS 325 + CS 328</p>
+          <h3>Relational Database + Transportation Tracking System</h3>
+          <p>I served as database architect for a three-person team in Database Design (CS 325), owning the process from requirements and conceptual modeling through implementation and verification. The result was a 3NF relational design with more than 25 logical entities and 20 tables.</p>
+          <p>In Web Apps Using Databases (CS 328), I took the knowledge from that database design class and developed the project further into a working web application. The interface uses the database and its supporting files to turn the underlying relational structure into a practical, user-facing experience.</p>
+          <div class="grid two-col compact-grid">
+            <div>
+              <h4>Design + modeling</h4>
+              <p>Translated the system domain into an extensive entity-relationship model, resolved relationships, and normalized data to reduce duplication and preserve dependable records.</p>
+            </div>
+            <div>
+              <h4>Build + validation</h4>
+              <p>Wrote and optimized thousands of lines of Oracle SQL, including queries, indexes, views, integrity constraints, and transaction boundaries.</p>
+            </div>
+          </div>
+          <p class="database-process"><strong>Lifecycle:</strong> requirements &rarr; ER diagram &rarr; 3NF schema &rarr; SQL implementation &rarr; web application &rarr; testing and optimization</p>
+          <a class="text-link" href="325model.pdf" target="_blank" rel="noopener">Open the full database model PDF &rarr;</a>
+        </div>
+      </article>
       <div class="grid three-col">
         <article class="panel project-card">
+          <div class="project-thumb">
+            <img src="images/project-learning-engine.png" alt="Learning Engine project slide" onerror="this.remove()">
+          </div>
           <h3>Learning Engine (Hackathon for Social Good)</h3>
           <p>Spring 2026</p>
           <ul>
@@ -102,6 +159,9 @@
           </ul>
         </article>
         <article class="panel project-card">
+          <div class="project-thumb">
+            <img src="images/project-rag-qa.png" alt="RAG Document Q&A tool screenshot" onerror="this.remove()">
+          </div>
           <h3>RAG Document Q&A Tool</h3>
           <p>Summer 2026</p>
           <ul>
@@ -111,10 +171,13 @@
           </ul>
         </article>
         <article class="panel project-card">
+          <div class="project-thumb">
+            <img src="images/project-leetcode.png" alt="LeetCode Grind 75 progress screenshot" onerror="this.remove()">
+          </div>
           <h3>LeetCode Grind 75</h3>
           <p>Summer 2026</p>
           <ul>
-            <li>Completed all 75 Grind75 problems independently.</li>
+            <li>Completed all 75 Grind75 problems.</li>
             <li>Strengthened practical fluency with production-grade data structures and problem-solving patterns.</li>
           </ul>
         </article>
@@ -125,13 +188,17 @@
       <h2>Experience + Leadership</h2>
       <div class="timeline">
         <article class="panel timeline-item">
+          <div class="timeline-thumb">
+            <img src="images/ar-sandbox.png" alt="AR topology sandbox setup" onerror="this.remove()">
+          </div>
           <h3>Library Scholar Intern, Terraform Project</h3>
           <p class="meta">Cal Poly Humboldt Library | Feb 2026 - May 2026</p>
           <ul>
-            <li>Rebuilt an AR topology sandbox simulation from scratch using new hardware and software.</li>
-            <li>Integrated a Kinect depth camera with an AI diffusion pipeline (TouchDesigner + StreamDiffusion) for interactive terrain visualization.</li>
-            <li>Authored complete setup documentation so future student scholars can onboard quickly.</li>
-            <li>Collaborated with IT and project managers to diagnose architecture issues and deliver an MIT-licensed release credited to the team.</li>
+            <li>Rebuilt an AR topology sandbox simulation from scratch, upgrading the physical setup and transitioning the system to a modern creative-coding stack [5, 6].</li>
+            <li>Integrated a Kinect depth camera with a real-time AI diffusion pipeline (TouchDesigner + StreamDiffusion), mapping complex 3D matrix transformations across camera, projector, and digital canvas spaces [2, 4, 6].</li>
+            <li>Consulted directly with technology directors at Tellart (Amsterdam/NY) to analyze their legacy OpenFrameworks and TensorFlow Pix2Pix setup, adopting their guidance to build a modern, sustainable architecture [1, 2, 6, 7].</li>
+            <li>Bypassed GPU driver compatibility constraints of deprecated machine learning libraries by implementing a local, zero-latency Python-to-TouchDesigner server environment [3, 8].</li>
+            <li>Collaborated with campus IT directors, project managers, and peer engineers to deliver an open-source, MIT-licensed release of our code and onboarding runbooks [6, 7].</li>
           </ul>
         </article>
 
@@ -141,6 +208,15 @@
           <ul>
             <li>Manage materials, logistics, and fast-moving site operations in a small business setting.</li>
             <li>Make practical real-time decisions while maintaining quality and reliability.</li>
+          </ul>
+        </article>
+
+        <article class="panel timeline-item">
+          <h3>Custom UNIX Command Line Shell</h3>
+          <p class="meta">Systems Programming | Fall 2026 - In Progress</p>
+          <ul>
+            <li>Building a UNIX-compliant shell in pure C with POSIX process lifecycle management using <code>fork()</code>, <code>exec()</code>, and <code>wait()</code>.</li>
+            <li>Implementing pipelines, input/output redirection, signal handling, foreground/background execution, and memory validation with Valgrind.</li>
           </ul>
         </article>
 
@@ -158,9 +234,15 @@
       <h2>Resume</h2>
       <div class="grid two-col">
         <article class="panel">
-          <h3>Resume (Current)</h3>
-          <p>Most complete version with technical projects, honors, and recent experience.</p>
-          <a class="text-link" href="Reece Dickinson Resume.pdf" target="_blank" rel="noopener">Open PDF</a>
+          <h3>Reece Dickinson Resume</h3>
+          <p>Full technical projects, honors, and recent experience in one PDF.</p>
+          <a class="text-link" href="reece-dickinson-resume-v2.pdf" target="_blank" rel="noopener">Open PDF &rarr;</a>
+        </article>
+        <article class="panel">
+          <h3>Working style</h3>
+          <p>Analytical, persistent, and comfortable translating technical decisions for non-technical teammates. I bring the same ownership to a database schema, a live deployment, and a physical project site.</p>
+          <p><strong>Languages:</strong> Native/fluent English and conversational Spanish.</p>
+          <p><strong>Certifications:</strong> Anthropic AI Fluency: Framework &amp; Foundations and Claude 101.</p>
         </article>
       </div>
     </section>

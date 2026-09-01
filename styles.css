@@ -28,25 +28,6 @@ body {
   min-height: 100vh;
 }
 
-.page-glow {
-  position: fixed;
-  inset: -10% -20% auto;
-  height: 380px;
-  background: radial-gradient(circle, rgba(0, 188, 212, 0.22) 0%, rgba(0, 188, 212, 0) 68%);
-  pointer-events: none;
-  z-index: -1;
-  animation: drift 12s ease-in-out infinite alternate;
-}
-
-@keyframes drift {
-  from {
-    transform: translateX(-4%);
-  }
-  to {
-    transform: translateX(4%);
-  }
-}
-
 .site-header {
   position: sticky;
   top: 0;
@@ -126,8 +107,64 @@ main {
 }
 
 .hero {
+  position: relative;
   padding-top: 84px;
   margin-top: 10px;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: -160px;
+  right: -120px;
+  width: 520px;
+  height: 420px;
+  background: radial-gradient(circle, rgba(0, 188, 212, 0.22) 0%, rgba(0, 188, 212, 0) 68%);
+  pointer-events: none;
+  z-index: -1;
+  animation: drift 12s ease-in-out infinite alternate;
+}
+
+@keyframes drift {
+  from {
+    transform: translateX(-4%);
+  }
+  to {
+    transform: translateX(4%);
+  }
+}
+
+.hero-flex {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1 1 480px;
+  min-width: 0;
+}
+
+.hero-media {
+  flex: 0 0 auto;
+}
+
+.avatar-frame {
+  width: 200px;
+  height: 200px;
+  border-radius: 28px;
+  overflow: hidden;
+  background: linear-gradient(150deg, rgba(0, 188, 212, 0.22), rgba(34, 230, 255, 0.06));
+  border: 1px solid var(--line);
+  box-shadow: 0 18px 40px rgba(0, 188, 212, 0.14);
+}
+
+.avatar-frame img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 
 .eyebrow {
@@ -242,6 +279,113 @@ li {
   border-radius: 16px;
   padding: 18px;
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.03);
+  transition: transform 200ms ease, border-color 200ms ease, box-shadow 200ms ease;
+}
+
+.panel:hover {
+  transform: translateY(-2px);
+  border-color: rgba(34, 230, 255, 0.45);
+  box-shadow: 0 14px 30px rgba(0, 188, 212, 0.1), inset 0 1px 0 rgba(255, 255, 255, 0.03);
+}
+
+.project-thumb,
+.timeline-thumb {
+  aspect-ratio: 16 / 9;
+  border-radius: 12px;
+  overflow: hidden;
+  margin: -18px -18px 14px;
+  width: calc(100% + 36px);
+  background: linear-gradient(150deg, rgba(0, 188, 212, 0.18), rgba(34, 230, 255, 0.05));
+  border-bottom: 1px solid var(--line);
+}
+
+.project-thumb img,
+.timeline-thumb img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-project {
+  display: grid;
+  grid-template-columns: minmax(280px, 0.9fr) minmax(0, 1.1fr);
+  gap: 24px;
+  margin-bottom: 14px;
+}
+
+.database-previews {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+}
+
+.database-preview {
+  min-height: 360px;
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.database-preview object {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+}
+
+.database-preview img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 360px;
+  object-fit: contain;
+}
+
+.database-preview figcaption {
+  background: var(--bg-soft);
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.72rem;
+  line-height: 1.4;
+  padding: 9px 11px;
+}
+
+.database-preview p {
+  padding: 24px;
+  color: #172331;
+}
+
+.featured-project-copy h3 {
+  font-size: 1.55rem;
+  margin-bottom: 12px;
+}
+
+.featured-project-copy h4 {
+  color: var(--accent-strong);
+  margin: 0;
+}
+
+.compact-grid {
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.compact-grid p {
+  color: var(--muted);
+  font-size: 0.92rem;
+  margin-top: 6px;
+}
+
+.database-process {
+  border-top: 1px solid var(--line);
+  color: #b9f8ff;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.78rem;
+  padding-top: 14px;
 }
 
 .panel ul {
@@ -359,7 +503,35 @@ footer {
     grid-template-columns: 1fr;
   }
 
+  .featured-project {
+    grid-template-columns: 1fr;
+  }
+
+  .database-previews {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .database-preview,
+  .database-preview object,
+  .database-preview img {
+    min-height: 180px;
+  }
+
+  .database-preview figcaption {
+    font-size: 0.66rem;
+  }
+
   .hero {
     padding-top: 58px;
+  }
+
+  .hero-flex {
+    flex-direction: column-reverse;
+    gap: 24px;
+  }
+
+  .avatar-frame {
+    width: 140px;
+    height: 140px;
   }
 }
