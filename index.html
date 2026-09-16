@@ -115,6 +115,40 @@
 
     <section id="projects" class="section">
       <h2>Technical Projects</h2>
+      <article class="panel ai-project">
+        <div class="ai-project-heading">
+          <p class="eyebrow">Self-directed technical project | RTX 4090 / 64GB RAM</p>
+          <h3>Local Generative AI Pipeline Engineering</h3>
+          <p class="meta">ComfyUI node-graph execution, open-weight diffusion models, and synchronized audio-video generation</p>
+        </div>
+        <div class="grid two-col compact-grid">
+          <div>
+            <h4>Deployment + optimization</h4>
+            <p>Deployed Chroma1-HD text-to-image, Wan 2.2 14B MoE image-to-video, MMAudio, and LTX-2.3 22B video outpainting from scratch. Selected compatible T5-XXL, UMT5-XXL, and Gemma 3 12B text encoders, VAEs, and FP8 quantization strategies to fit the available VRAM.</p>
+          </div>
+          <div>
+            <h4>Source-level debugging</h4>
+            <p>Patched cascading Python dependency conflicts in third-party ComfyUI extensions, including a breaking kornia API change and a huggingface_hub deprecated-argument mismatch, without downgrading shared dependencies.</p>
+          </div>
+          <div>
+            <h4>Architecture + pipeline fixes</h4>
+            <p>Traced a vendored BigVGAN vocoder failure to an incorrect v1/v2 class import, then fixed a frame-rate mismatch that truncated audio by replacing a single-image conversion step with batch-safe video processing.</p>
+          </div>
+          <div>
+            <h4>Reliable execution</h4>
+            <p>Resolved a file-handoff race condition by replacing an untracked save/load dependency with a pure in-memory node connection. Built working Wan 2.2 to MMAudio synchronization and LTX-2.3 IC-LoRA directional outpainting pipelines from incomplete documentation and source inspection.</p>
+          </div>
+        </div>
+        <div class="chip-row project-tags" aria-label="Project tools and concepts">
+          <span class="chip">ComfyUI</span>
+          <span class="chip">Wan 2.2</span>
+          <span class="chip">LTX-2.3</span>
+          <span class="chip">Chroma</span>
+          <span class="chip">MMAudio</span>
+          <span class="chip">Python dependency debugging</span>
+          <span class="chip">VRAM optimization</span>
+        </div>
+      </article>
       <article class="panel featured-project">
         <div class="database-previews">
           <figure class="database-preview">
