@@ -332,14 +332,11 @@ li {
 .database-preview > img {
   display: block;
   width: 100%;
-  aspect-ratio: 4 / 3;
   background: #fff;
 }
 
 .image-expand {
-  padding: 0;
-  border: 0;
-  cursor: zoom-in;
+  aspect-ratio: 5175 / 2673;
 }
 
 .image-expand:focus-visible {
@@ -347,13 +344,16 @@ li {
   outline-offset: -2px;
 }
 
-.database-preview object,
 .image-expand img,
 .database-preview > img {
   display: block;
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
+}
+
+.database-preview > img {
+  aspect-ratio: 2132 / 1184;
 }
 
 .database-preview figcaption {
@@ -369,55 +369,6 @@ li {
 .database-preview p {
   padding: 24px;
   color: #172331;
-}
-
-.modal-open {
-  overflow: hidden;
-}
-
-.image-modal[hidden] {
-  display: none;
-}
-
-.image-modal {
-  position: fixed;
-  inset: 0;
-  z-index: 20;
-  display: grid;
-  place-items: center;
-  padding: 32px;
-  background: rgba(2, 6, 12, 0.92);
-}
-
-.image-modal-content {
-  display: block;
-  max-width: min(1200px, 94vw);
-  max-height: 92vh;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.45);
-}
-
-.image-modal-close {
-  position: absolute;
-  top: 18px;
-  right: 24px;
-  width: 42px;
-  height: 42px;
-  border: 1px solid var(--line);
-  border-radius: 50%;
-  background: var(--bg-soft);
-  color: var(--text);
-  font-size: 1.8rem;
-  line-height: 1;
-  cursor: pointer;
-}
-
-.image-modal-close:hover,
-.image-modal-close:focus-visible {
-  color: var(--accent-strong);
-  border-color: var(--accent-strong);
 }
 
 .featured-project-copy h3 {
@@ -574,10 +525,6 @@ footer {
 
   .database-preview figcaption {
     font-size: 0.66rem;
-  }
-
-  .image-modal {
-    padding: 18px;
   }
 
   .hero {
