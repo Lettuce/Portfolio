@@ -438,6 +438,60 @@ li {
   background: linear-gradient(90deg, var(--accent), transparent);
 }
 
+.ai-project {
+  margin-bottom: 14px;
+  border-color: rgba(34, 230, 255, 0.35);
+}
+
+.ai-project-heading h3 {
+  margin-bottom: 8px;
+}
+
+.ai-pipeline-gallery {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 12px;
+  margin: 20px 0 4px;
+}
+
+.ai-pipeline-image {
+  margin: 0;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  background: #fff;
+}
+
+.ai-pipeline-image img {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+}
+
+.ai-pipeline-image:nth-child(-n + 2) img {
+  background: #fff;
+  object-fit: contain;
+  object-position: center;
+}
+
+.ai-pipeline-image figcaption {
+  background: var(--bg-soft);
+  border-top: 1px solid var(--line);
+  color: var(--muted);
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.7rem;
+  line-height: 1.4;
+  padding: 9px 10px;
+}
+
+.ai-impact {
+  border-top: 1px solid var(--line);
+  color: #b9f8ff;
+  margin: 18px 0 0;
+  padding-top: 14px;
+}
+
 .timeline {
   display: grid;
   gap: 14px;
@@ -521,6 +575,10 @@ footer {
 
   .database-previews {
     grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .ai-pipeline-gallery {
+    grid-template-columns: 1fr;
   }
 
   .database-preview figcaption {
